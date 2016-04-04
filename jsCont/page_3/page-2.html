@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>放大镜</title>
+<style>
+*{ margin:0; padding:0;}
+div{ position:relative; float:left; overflow:hidden; margin:50px; width:310px; height:310px;}
+#div1{ background:url(images/m1.jpg);}
+p{ width:80px; height:80px; background:yellow; opacity:0.3; position:absolute; top:0; left:0; display:none;}
+#div2{ display:none;}
+img{ position:absolute; top:0; left:0; width:900px; height:900px; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var oP=$('#p1');	
+	var oDiv1=$('#div1');
+	var oDiv2=$('#div2');
+	var oImg=$('#img1');
+	var maxLeft=oDiv1.width()-oP.width();
+	var maxTop=oDiv1.height()-oP.height();
+	var maxImgWidth=oImg.width()-oDiv2.width();
+	var maxImgHeight=oImg.height()-oDiv2.height();
+	oDiv1.hover(function (){
+		oP.show();
+		oDiv2.show();	
+	}, function (){
+		oP.hide();
+		oDiv2.hide();	
+	})
+	oDiv1.mousemove(function (ev){
+		var left=ev.clientX-oDiv1.offset().left-oP.width()/2;
+		var top=ev.clientY-oDiv1.offset().top-oP.height()/2;
+		
+		if (left < 0)
+		{
+			left=0;	
+		}
+		else if (left > maxLeft)
+		{
+			left=maxLeft;	
+		}
+		if (top < 0)
+		{
+			top=0;	
+		}
+		else if (top > maxTop)
+		{
+			top=maxTop;	
+		}
+		oP.css({
+			left:left+'px',
+			top:top+'px'	
+		});
+		//算比例
+		oImg.css({
+			left:-left/maxLeft*maxImgWidth+'px',
+			top:-top/maxTop*maxImgHeight+'px'	
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+	<div id="div1">
+		<p id="p1"></p>
+	</div>
+	<div id="div2">
+		<img src="images/b1.jpg" id="img1" />
+	</div>
+</body>
+</html>

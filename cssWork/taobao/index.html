@@ -1,0 +1,2162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>淘宝首页</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/index.css" />
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/taobao.js"></script>
+<script>
+$(function(){
+	var oSel=$('#Csel');
+	var oSpan=$('#Csel span');
+	var oUl=$('#Csel ul');
+	var aLi=$('#Csel li');
+	
+	oSel.click(function(){
+		oUl.css('display','block');
+	});
+	aLi.mousedown(function(){
+		oSpan.html($(this).html());
+		oUl.css('display','none');
+	})
+});
+window.onload=function(){
+	
+	//吸顶条
+	var oDivC=document.getElementById('float-nav');
+	
+	var oBoxC=document.getElementById('search_box');
+	
+	
+	
+	var Top=getPos(oBoxC).top; 
+	window.onscroll=function(){
+		var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+		
+		if(scrollTop>=Top){
+			oDivC.style.display="block";
+		}else{
+			oDivC.style.display="none";
+		};
+	};
+	
+	//搜索
+	var oTextC=document.getElementById('text');
+	var val=oTextC.value;
+	oTextC.onfocus=function(){
+		oTextC.value='';	
+	};
+	oTextC.onblur=function(){
+		var re=/^\s+$/;
+		if(re.test(oTextC.value)||oTextC.value==''){
+			oTextC.value=val;
+		};
+	};
+
+};
+function getPos(obj){
+	var l=0,t=0;
+	while(obj)
+	{
+		l+=obj.offsetLeft;
+		t+=obj.offsetTop;
+		obj=obj.offsetParent;	
+	};
+	return {left:l,top:t};
+};
+</script>
+</head>
+
+<body>
+<div class="float-nav" id="float-nav">
+	<div class="float-navCon">
+    	<div class="float-navCoL"><img height="35" src="images/logo.gif" /></div>
+    	<div class="float-navCoR">
+			<div class="float-NRCon clearfix">
+            	<div class="float-NRConL">
+                	<div class="float-NRConL-sel" id="Csel">
+                    	<span>宝贝</span>
+                        <ul>
+                        	<li>宝贝</li>
+                        	<li>店铺</li>
+                        </ul>
+                    </div>
+                    <input value="搜家装生活5折，试试" type="text"  id="text"/>
+                </div>
+                <div class="float-NRConR"><span>搜索</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- rangcheng -->
+	<div id="top" class="top">
+    	<div class="Ran_login">
+        	<div class="login1">
+            	<ul class="left">
+                	<li><a class="red" href="javascript:;">亲，请登录</a></li>
+                    <li><a href="javascript:;">免费注册</a></li>
+                    <li><a href="javascript:;">手机逛淘宝</a></li>
+                </ul>
+                <ul class="right">
+                	<li class="menu">
+                    	<div>我的淘宝<i class="jiantou"></i></div>
+                    	<ul class="hid">
+                        	<li><a href="javascript:;">已买到的宝贝</a></li>
+                            <li><a href="javascript:;">新欢</a></li>
+                            <li><a href="javascript:;">拾货</a></li>
+                            <li><a href="javascript:;">我的足迹</a></li>
+                            <li><a href="javascript:;">我的上新</a></li>
+                            <li><a href="javascript:;">我的优惠</a></li>
+                        </ul>
+                    </li>
+                    <li class="buyCar">
+                    	<div><i class="tubiao tubiao1"></i>购物车<span class="red">0</span><i class="jiantou"></i></div>
+                        <ul>111</ul>
+                    </li>
+                    <li class="favorite">
+                    	<div><i class="tubiao tubiao2"></i>收藏夹<i class="jiantou"></i></div>
+                        <ul>
+                        	<li><a href="javascript:;">收藏的宝贝</a></li>
+                        	<li><a href="javascript:;">收藏的店铺</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">商品分类</a></li>
+                    <li class="gray">|</li>
+                    <li class="seller-center">
+                    	<div>卖家中心<i class="jiantou"></i></div>
+                        <ul>
+                            <li><a href="javascript:;">免费开店</a></li>
+                            <li><a href="javascript:;">已卖出的宝贝</a></li>
+                            <li><a href="javascript:;">出售中的宝贝</a></li>
+                            <li><a href="javascript:;">卖家服务市场</a></li>
+                            <li><a href="javascript:;">卖家培训中心</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">联系客服</a></li>
+                    <li class="web-nav">
+                    	<div><i class="tubiao tubiao3"></i>网站导航<i class="jiantou"></i></div>
+                        <ul class="clearfix">
+                        	<div>
+                            	<h3>主题市场</h3>
+                                <ul class="clearfix">
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                </ul>
+                            </div>
+                        	<div>
+                            	<h3>主题市场</h3>
+                                <ul class="clearfix">
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                </ul>
+                            </div>
+                        	<div>
+                            	<h3>主题市场</h3>
+                                <ul class="clearfix">
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                </ul>
+                            </div>
+                        	<div>
+                            	<h3>主题市场</h3>
+                                <ul class="clearfix">
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                	<li><a href="javascript:;">女式凉鞋</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Ran_search">
+            <div class="logo"></div>
+            <div class="erweima">
+            	<span class='red'>点我抽红包</span>
+            	<span class="close"></span>
+            </div>
+            <div class="search">
+            	<div class="search_box" id="search_box">
+                	<div class="baobei">宝贝<i class="jiantou"></i></div>
+                    <div class="input">
+                    	<input type="text" value="搜家装生活5折，试试">
+                        <span class="bigger"></span>
+                        <span class="voice"></span>
+                    </div>
+                    <div class="btn white">搜索</div>
+                </div>
+                <div class="superSearch">高级搜索</div>
+                <div class="nav">
+                	<ul>
+                    	<li><a href="javascript:;">女式凉鞋</a></li>
+                        <li><a href="javascript:;">防晒衣</a></li>
+                        <li><a class="red" href="javascript:;">新款连衣裙</a></li>
+                        <li><a href="javascript:;">大码女装</a></li>
+                        <li><a href="javascript:;">女式T血</a></li>
+                        <li><a href="javascript:;">雪纺衫</a></li>
+                        <li><a href="javascript:;">新款男鞋</a></li>
+                        <li><a href="javascript:;">时尚女包</a></li>
+                        <li><a href="javascript:;">男式T血</a></li>
+                        <li><a href="javascript:;">情侣装</a></li>
+                        <li><a href="javascript:;">孕妇装</a></li>
+                        <li><a href="javascript:;">短裤</a></li>
+                        <li><a href="javascript:;">文章</a></li>
+                        <li><a class="more" href="javascript:;">更多</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!-- chunrui -->
+<div class="banner clearfix">
+<!--左边菜单开始-->
+	<div class="mcFl fl">
+    	<h3>特色淘宝服务</h3>
+        <div class="mcBorder">
+            <div class="clM clMarket">
+                <h4><span></span>主题市场</h4>
+                <a href="javascript:;">爱美女人</a>
+                <a href="javascript:;">运动派</a>
+                <a href="javascript:;">情侣</a>
+                <a href="javascript:;">品质男人</a>
+                <a href="javascript:;">孕婴童</a>
+                <a href="javascript:;">家居</a>
+                <a href="javascript:;">美容护肤</a>
+                <a href="javascript:;">中老年</a>
+                <a href="javascript:;">美食</a>
+                <a href="javascript:;">美嫁新娘</a>
+                <a href="javascript:;">有车族</a>
+                <a href="javascript:;">装修</a>
+                <a href="javascript:;">健康达人</a>
+                <a href="javascript:;">游戏</a>
+                <a href="javascript:;">动漫</a>
+               
+            </div>
+            <div class="clM clShop">
+                <h4><span></span>特色购物</h4>
+               	<a href="javascript:;">爱美女人</a>
+                <a href="javascript:;">运动派</a>
+                <a href="javascript:;">情侣</a>
+                <a href="javascript:;">品质男人</a>
+                <a href="javascript:;">孕婴童</a>
+                <a href="javascript:;">家居</a>
+                <a href="javascript:;">美容护肤</a>
+                <a href="javascript:;">中老年</a>
+                <a href="javascript:;">美食</a>
+                <a href="javascript:;">美嫁新娘</a>
+                <a href="javascript:;">有车族</a>
+                <a href="javascript:;">装修</a>
+                <a href="javascript:;">健康达人</a>
+                <a href="javascript:;">游戏</a>
+                <a href="javascript:;">动漫</a>
+            </div>
+            <div class="clM clSales">
+                <h4><span></span>优惠促销</h4>
+                <a href="javascript:;">爱美女人</a>
+                <a href="javascript:;">运动派</a>
+                <a href="javascript:;">情侣</a>
+                <a href="javascript:;">品质男人</a>
+                <a href="javascript:;">孕婴童</a>
+            </div>
+            <div class="clM clTool">
+                <h4><span></span>工具</h4>
+                <a href="javascript:;">情侣</a>
+                <a href="javascript:;">品质男人</a>
+                <a href="javascript:;">孕婴童</a>
+            </div>
+        </div>
+    </div>
+<!--左边菜单结束-->
+
+<!--右边开始-->
+    <div class="mcFr fr">
+    	<div class="mcNav">
+        	<ul class="mcL">
+            	<li>天猫</li>
+            	<li>聚划算</li>
+            	<li>超市</li> 
+             </ul>
+             <ul class="mcR">         
+            	<li>司法拍卖</li>
+            	<li>一淘</li>
+            	<li>电器城</li>
+            	<li>嗨淘妆品</li>
+            	<li>旅行</li>
+            	<li>云智能</li>
+            	<li>特色中国</li>
+            </ul>
+            <span class="mcFR fr">消费者保障</span>
+        </div>
+        <div class="mcContent">
+        	<div class="fl mcPicture">
+                <div class="fl lbt">
+                    <div id='box' class="box">
+                        <ul>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                        </ul>
+                        <ol>
+                            <li class="active"><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                        </ol>
+                    </div>
+                    <div id='box1' class="box boxnext">
+                        <ul>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                            <li><a href="javascript:;"><img src="images/img2/1.png" /></a></li>
+                        </ul>
+                        <ol>
+                            <li class="active"><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                        </ol>
+                    </div>
+                 </div>
+                 <div class="banner-pic fr">
+                 	<a href="javascript:;"><img src="images/11.jpg"></a>
+                 	<a href="javascript:;"><img src="images/11.jpg"></a>
+                 </div>
+            </div>
+            <div class="fr mcSelect">
+            	<div class="option" id="option">
+                	<ul class="new" id="sel">
+                    	<li class="active">公告</li>
+                        <li>规则</li>
+                        <li>论坛</li>
+                        <li>安全</li>
+                        <li>公益</li>
+                    </ul>
+                    <div>
+                        <ul class="show mcSh">
+                            <li class="color">天猫单日兽超100万手机</li>
+                            <li>淘宝上的世界杯</li>
+                            <li>云计算上的污染地图</li>
+                            <li>脸萌IT成本仅73元</li>
+                        </ul>
+                        <ul class="mcSh">
+                            <li>天猫单日兽超10手机</li>
+                            <li>淘宝上的世界杯</li>
+                            <li>云计算上的污染地图</li>
+                            <li>脸萌IT成本仅73元</li>
+                        </ul>
+                        <ul class="mcSh">
+                            <li>天猫单日兽超100万手机</li>
+                            <li>淘宝世界杯</li>
+                            <li>云计的污染地图</li>
+                            <li>脸萌IT成本仅73元</li>
+                        </ul>
+                        <ul class="mcSh">
+                            <li>天猫单日兽超100万手机</li>
+                            <li>淘宝上的世界杯</li>
+                            <li>云计算上的污染地图</li>
+                            <li>本仅73元</li>
+                        </ul>
+                        <ul class="mcSh">
+                            <li>超100万手机</li>
+                            <li>淘宝界杯</li>
+                            <li>云计算上污染地图</li>
+                            <li>脸萌IT成本仅73元</li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="logIn">
+                    <div class="club">
+                        <div class="img fl"></div>
+                        <div class="fl tjb">
+                        	<h6>Hi,你好</h6>
+                            <div class="jlb">
+                                <a href="javascript:;">领淘金币抵钱</a>
+                                <a href="javascript:;" >会员俱乐部</a>
+                            </div>
+                        </div>
+                    </div>
+                	<ul class="user">
+                    	<li class="reg"><a href="javascript:;">登陆</a></li>
+                    	<li><a href="javascript:;">免费注册</a></li>
+                    	<li><a href="javascript:;">免费开店</a></li>
+                    </ul>
+                </div>
+            	<div class="Serve">
+                	<h5>便民服务</h5>
+                    <ul class="mcBox">
+                    	<li><span></span>话费</li>
+                        <li><span></span>游戏</li>
+                        <li><span></span>旅行</li>
+                        <li><span></span>保险</li>
+                        <li><span></span>彩票</li>
+                        <li><span></span>电影票</li>
+                        <li><span></span>点外卖</li>
+                        <li><span></span>理财</li>
+                        <li><span></span>电子书</li>
+                        <li><span></span>音乐</li>
+                        <li><span></span>水电煤</li>
+                        <li class="more"><span></span>请期待</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<!-- chunrui -->
+    
+<!-- lenghao -->
+<div class="main">
+	<div class="lh-mainHot">
+    	<ul>
+        	<li class="hot">
+            	<span>当前热点</span>
+            	<div>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                </div>
+            </li>
+        	<li class="hot">
+            	<span>精彩推荐</span>
+            	<div>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                	<a href="javascript:;">热卖凉鞋</a>
+                </div>
+            </li>
+        	<li class="hot1"><img width="298" src="images/hot_pic01.jpg" /></li>
+        	<li class="hot1"><img width="298" src="images/hot_pic01.jpg" /></li>
+        </ul>
+    </div>
+    <div class="lh-mainCon">
+    	<div class="lh-mainLayer clearfix">
+        	<div class="lh-mainLayer-left">
+            	<!-- layer begin -->
+            	<div class="lh-mainLayer-leftBox">
+                	<div class="lh-leftBoxCon clearfix">
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                           		<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lh-leftBoxBanner"><img src="images/layer01-banner.jpg" /></div>
+                </div>
+                <!-- layer end -->
+            	<!-- layer begin -->
+            	<div class="lh-mainLayer-leftBox">
+                	<div class="lh-leftBoxCon clearfix">
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lh-leftBoxBanner"><img src="images/layer01-banner.jpg" /></div>
+                </div>
+                <!-- layer end -->
+            	<!-- layer begin -->
+            	<div class="lh-mainLayer-leftBox">
+                	<div class="lh-leftBoxCon clearfix">
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    	<!-- 男女服饰 -->
+                    	<div class="lh-leftBoxCon01">
+                        	<h3>
+                            	<span>男女服饰</span>
+                            	<div class="lh-leftBoxCon01-title clff4201"><span>今日活动：</span>恋上连衣裙，夏季新品5折起</div>
+                            </h3>
+                            <div class="lh-leftBoxCon01-ch clearfix">
+                            	<div class="lh-leftBoxCon01-chL"><img src="images/layer01.jpg" /></div>
+                                <div class="lh-leftBoxCon01-chR">
+                                	<ul>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist clff4201" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a class="clff4201" href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">裤子</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    	<li>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">新品女装</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a class="clff4201" href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">连衣裙</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="frist" href="javascript:;">T恤</a>
+                                            	<a class="clff4201" href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        	<dl>
+                                            	<a class="clff4201" class="frist" href="javascript:;">裤子</a>
+                                            	<a href="javascript:;">衬衫</a>
+                                            	<a href="javascript:;">雪纺</a>
+                                            	<a href="javascript:;">防晒衫</a>
+                                            	<a href="javascript:;">大码</a>
+                                            	<a href="javascript:;">时尚套装</a>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lh-leftBoxBanner"><img src="images/layer01-banner.jpg" /></div>
+                </div>
+                <!-- layer end -->
+            </div>
+            <div class="lh-mainLayer-right">
+            	<div class="lh-mainLayer-rightCon">
+                	<h3>发现·好货</h3>
+                    <ul>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        </li>
+                        <li class="rush"><span>换一批试试</span></li>
+                    </ul>
+                    
+                </div>
+            	<div class="lh-mainLayer-rightCon">
+                	<h3>发现·好货</h3>
+                    <ul>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<img width="100" src="images/layerRigth_banner01.jpg" />
+                            <div class="lh-MlRC-Con">
+                            	<h4>雷恩体育乔白紫葡</h4>
+                                <p>“这个商品暂时还没评价”</p>
+                                <span>1038收藏</span>
+                            </div>
+                        </li>
+                    	<li class="clearfix">
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        	<a href="javascript:;"><img src="images/a1.jpg" /></a>
+                        </li>
+                        <li class="rush"><span>换一批试试</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    	<div class="lh-mainPd">
+        	<div class="lh-mainPd-ly">
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            	<div class="lh-mainPd-lyCon">
+                	<h3>明星开店在这里</h3>
+                    <div class="lh-mainPd-lyCenter">
+                    	<a href="javascript:;">
+                        	<img src="images/mainpd_pic.jpg" />
+                            <span class="pic-desc">
+                            	<h4>熊先生2周年了！</h4>
+                                <span>速来赢取快乐大本营门票</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lh-mainPd-lyBottom">
+                    	<div class="pics">
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        	<a class="pics-a" href="javascript:;">
+                            	<img src="images/mainpd_pic01.jpg" />
+                                <div class="pic-title">老男孩同款</div>
+                            </a>
+                        </div>
+                        <p class="channel-tag">
+                        	<a href="javascript:;">明星半裸</a>
+                        	<a href="javascript:;">周笔畅同款</a>
+                        	<a href="javascript:;">安又琪</a>
+                        </p>
+                        <p class="article-title">
+                        	<span>[<a class="clff4201" href="javascript:;">明星同款</a>]</span>
+                            <a href="javascript:;">周迅：女王的路</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="sale">
+            	<div class="sale-hd clearfix">
+                	<span>热卖单品</span>
+                    <div class="sale-nav">
+                    	<a href="javascript:;">糯米胶</a>
+                    	<a href="javascript:;">跑步包</a>
+                    	<a href="javascript:;">杰威尔</a>
+                    	<a href="javascript:;">男鞋</a>
+                    	<a href="javascript:;">香水</a>
+                    	<a href="javascript:;">女衬衫</a>
+                    	<a href="javascript:;">亲子装</a>
+                    	<a href="javascript:;">牛仔裤</a>
+                    	<a href="javascript:;">玩具</a>
+                    	<a href="javascript:;">雪纺衫</a>
+                    	<a href="javascript:;">巧克力</a>
+                    	<a href="javascript:;">男内裤</a>
+                    	<a href="javascript:;">座垫</a>
+                    	<a href="javascript:;">文胸</a>
+                    	<a href="javascript:;">客厅灯</a>
+                    	<a href="javascript:;">牛仔</a>
+                    	<a href="javascript:;">更多</a>
+                    </div>
+                </div>
+                <ul class="sale-Con clearfix">
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">
+                        	<img src="images/sale_pic01.jpg" />
+                            <strong>真皮沙滩鞋男式夏季超</strong>
+                        </a>
+                        <p>
+                        	<span class="clff4201">￥</span>
+                            <strong class="clff4201">108.00</strong>
+                        </p>
+                        <p>
+                        	<span>￥</span>
+                            <del>398.00</del>
+                            <i class="pipe">|</i>
+                            <em>月销95件</em>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sale-banner clearfix">
+            	<a href="javascript:;"><img src="images/sale_banner01.jpg" /></a>
+            	<a href="javascript:;"><img src="images/sale_banner02.jpg" /></a>
+            	<a href="javascript:;"><img src="images/sale_banner03.jpg" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- lenghao -->    
+    
+    
+    
+    <div id="foot" class="foot">
+    	 <div class="Ran_four_mod">
+         	<div class="mod mod1">           	 
+                <h3>消费者保障</h3>
+                <a href="javascript:;">保障范围</a>
+                <a href="javascript:;">退货退款流程</a>
+                <a href="javascript:;">服务中心</a>
+                <a href="javascript:;">更多特色服务</a>                
+            </div>
+            <div class="mod mod2">
+            	<h3>消费者保障</h3>
+                <a href="javascript:;">保障范围</a>
+                <a href="javascript:;">退货退款流程</a>
+                <a href="javascript:;">服务中心</a>
+                <a href="javascript:;">更多特色服务</a>                
+
+            </div>
+            <div class="mod mod3">
+            	                <h3>消费者保障</h3>
+                <a href="javascript:;">保障范围</a>
+                <a href="javascript:;">退货退款流程</a>
+                <a href="javascript:;">服务中心</a>
+                <a href="javascript:;">更多特色服务</a>                
+
+            </div>
+            <div class="mod mod4">
+            	                <h3>消费者保障</h3>
+                <a href="javascript:;">保障范围</a>
+                <a href="javascript:;">退货退款流程</a>
+                <a href="javascript:;">服务中心</a>
+                <a href="javascript:;">更多特色服务</a>                
+
+            </div>
+         </div>
+         <div class="Ran_website">
+         	<a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+            <a>阿里巴巴集团</a>|
+         </div>
+         <div class="Ran_copyright">
+         	<a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <a>关于淘宝</a>
+            <span class="gray1 copyright">2003-2014 taobao.com版权所有</span><br>
+            <span class="gray1">网络文化经营许可证：文网文[2010]040号 |网络文化经营许可证：文网文[2010]040号 网络文化经营许可证：文网文[2010]040号 </span><br>
+         	<a class="pic pic1"></a>
+            <a class="pic pic2"></a>
+            <a class="pic pic3"></a>
+            <a class="pic pic4"></a>
+            <a class="pic pic5"></a>
+            <a class="pic pic6"></a>
+         
+         </div>
+    </div>
+<!-- rangcheng -->
+</body>
+</html>

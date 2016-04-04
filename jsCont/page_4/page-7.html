@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>正则-验证座机</title>
+<style>
+
+</style>
+<script>
+window.onload=function(){
+	var oT=document.getElementById('t1');	
+	var oBtn=document.getElementById('btn1');
+	
+	var reg=/^(0[1-9]\d{1,2}-)?[2-8]\d{6,7}$/;
+	
+	oBtn.onclick=function(){
+		alert(reg.test(oT.value));
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="text" id="t1">
+<input type="button" value="校验" id="btn1">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

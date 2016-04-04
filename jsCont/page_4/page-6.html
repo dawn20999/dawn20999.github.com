@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ajax</title>
+<style>
+li{ height:30px; line-height:30px; border-bottom:1px dashed #ccc; width:300px;}
+li span{ float:right;}
+</style>
+<script src="ajax.js"></script>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	var oUl=document.getElementById('ul1');	
+	
+	oBtn.onclick=function(){
+		ajax('weibo.data?t='+Math.random(),function(str){
+			oUl.innerHTML='';
+			
+			var arr=eval('('+str+')');
+			
+			arr.sort(function(){
+				return Math.random()-0.5;	
+			});
+			
+			//创建元素
+			for(var i=0; i<4; i++){
+				var oLi=document.createElement('li');
+				oLi.innerHTML='<span>'+arr[i].r_count+'W</span><a href="'+arr[i].href+'">'+arr[i].title+'</a>';
+				oUl.appendChild(oLi);
+			}
+		},function(){
+			alert('失败了');	
+		});	
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="换一换" id="btn1">
+<ul id="ul1">
+	<!--<li><span>123W</span><a href="javascript:;">xxxxx</a></li>
+    <li><span>123W</span><a href="javascript:;">xxxxx</a></li>
+    <li><span>123W</span><a href="javascript:;">xxxxx</a></li>-->
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

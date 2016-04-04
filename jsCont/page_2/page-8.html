@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>官网页码</title>
+<style>
+* { margin:0; padding:0; }
+ul { margin:50px auto; width:510px; height:510px; border:1px solid red; }
+li { list-style:none; width:150px; height:150px; margin:10px; background:#ccc; float:left; }
+input { position:absolute; top:100px; left:50px; width:100px; height:30px; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var aLi=$('li');
+	var oBtn=$('#btn');
+	var aPos=[];
+	aLi.each(function (){
+		aPos.push({
+			top : $(this).offset().top,
+			left : $(this).offset().left	
+		});
+	});	
+	aLi.each(function (index){
+		$(this).css({
+			top:aPos[index].top,
+			left:aPos[index].left,
+			position:'absolute',
+			margin:0	
+		});	
+	});
+	oBtn.click(function (){
+		var n=0;
+		var timer=setInterval(function (){
+			(function (index){
+				aLi.eq(n).stop().animate({
+					top:0, left:0, width:0,height:0	
+				},{
+					complete:function (){
+						if (index == aLi.length-1)
+						{
+							end();	
+						}	
+					}	
+				});	
+				n++;
+				if (n == aLi.length)
+				{
+					clearInterval(timer);	
+				}
+			})(n);	
+		},300);
+	});
+	function end(){
+		aLi.css('background', 'green');
+		var n=aLi.length-1;	
+		var timer=setInterval(function (){
+			aLi.eq(n).stop().animate({
+				top:aPos[n].top,
+				left:aPos[n].left,	
+				width:'150px',
+				height:'150px'
+			});	
+			n--;
+			if (n == -1)
+			{
+				clearInterval(timer);	
+			}
+		}, 300);
+	}
+});
+</script>
+</head>
+
+<body>
+	<input type="button" value="go" id="btn" />
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

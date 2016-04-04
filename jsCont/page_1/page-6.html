@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>重新发送</title>
+<style>
+input { display:block; width:200px; height:40px; margin:50px auto; }
+</style>
+<script>
+window.onload=function (){
+	var oBtn=document.getElementById('btn');
+	var n=5;
+	var bFlag=false;
+	
+	oBtn.onclick=function (){
+		
+		if (bFlag)
+		{
+			return;
+		}
+		
+		bFlag=true;
+		tick();
+		var timer=setInterval(tick, 1000);
+		
+		function tick()
+		{
+			oBtn.value=n+'秒后，重新发送';
+			n--;
+			
+			if (n == -1)
+			{
+				oBtn.value='重新发送';
+				clearInterval(timer);
+				bFlag=false;
+				n=5;
+			}
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+	<input type="button" value="点击发送" id="btn" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

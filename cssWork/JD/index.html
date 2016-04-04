@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>京东</title>
+<link rel="stylesheet" href="bass/base.css" />
+<link rel="stylesheet" href="bass/style.css" />
+ <script>
+   window.onload = function (){
+	   var oImg=document.getElementById('banner');
+	   var oBtn=document.getElementById('btn');
+	   var aImg=oImg.getElementsByTagName('img');
+	   var aBtn=oBtn.getElementsByTagName('a');
+	   for(var i=0;i<aBtn.length;i++){
+		   aBtn[i].index=i;
+		   aBtn[i].onmouseover=function(){
+			   for(var i=0;i<aBtn.length;i++){
+				   aBtn[i].className='';
+				   aImg[i].className='';
+				   }
+			   this.className='first';
+			   aImg[this.index].className='active';
+			   }
+		   }
+	   
+	   }
+</script>
+</head>
+
+<body>
+  <div class="head_top">
+      <div class="box clearfix">
+          <p class="dress fl">
+              <a href="#">送至：河北</a>
+              <i></i>
+          </p>
+          <ul class="list fr">
+               <li><a href="#">你好，请登录 <span class="free">免费注册</span></a></li>
+               <li><a href="#">我的订单</a></li>
+               <li>
+                   <a href="#" class="my">我的京东</a>
+                   <i></i>
+               </li>
+               <li><a href="#">京东会员</a></li>
+               <li><a href="#">企业采购</a></li>
+               <li>
+                    <a href="#" class="my">手机京东</a>
+                    <i></i>
+               </li>
+               <li>
+                     <a href="#" class="my">关注京东</a>
+                         <i></i>
+                     
+               </li>
+               <li>
+                     <a href="#" class="my">客户服务</a>
+                     <i></i>
+               </li>
+               <li>
+                    <a href="#" class="my1">京东导航</a>
+                    <i></i>
+               </li>
+          </ul>
+      </div>
+  </div>
+  <div class="head_middle clearfix">
+     <div class="photo fl">
+        <h1 class="logo"><a href="#">京东</a></h1>
+        <p class="pic"><a href="#">座椅节</a></p>
+     </div>
+     <div class="search fl">
+         <p class="head_m_m clearfix">
+             <input type="txt" placeholder="智能微投"  class="txt fl"/>
+             <input type="submit" value="搜索" class="btn" fl/>
+         </p>
+         <p>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+             <a href="#">魅蓝note2</a>
+         </p>
+     </div>
+     <div class="head_mr fr">
+          <i class="ico"></i>
+          <a href="#" class="buycar">我的购物车</a>
+          <a href="#" class="door_m">
+             <i class="door_l"></i>
+              1
+             <i class="door_r"></i>
+          </a>
+          <p class="come"></p>
+     </div>
+  </div>
+  <div class="head_foot">
+       <div class="nav clearfix">
+            <h2 class="tit fl">全部商品分类</h2>
+            <p class="title_bar fl">
+                <a href="#">服装城</a>
+                <a href="#">美妆馆</a>
+                <a href="#">美食</a>
+                <a href="#">全球购</a>
+                <a href="#">山沟</a>
+                <a href="#">团购</a>
+                <a href="#">拍卖</a>
+                <a href="#">金融</a>
+                <a href="#">智能</a>
+            </p>
+       </div>
+  </div>
+  <div class="center_top clearfix">
+       <div class="sider_bar fl">
+           <ul class="list">
+               <li class="list_nav">
+                    <a href="#">家用电器</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">手机、数码、京东通信</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">办公、电脑</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">家具、家居、家装、厨具</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">男装、女装、内衣、珠宝</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">个护化妆</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">鞋靴、箱包、钟表、奢饰品</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">户外运动</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">汽车用品、汽车</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">母婴、玩具乐器</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">食品、酒类、生鲜、特产</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">营养保健</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">图书、音像、电子书</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">彩票、充值、旅行、票务</a>
+               </li>
+               <li class="list_nav">
+                    <a href="#">理财、保险</a>
+               </li>
+           </ul>
+       </div>
+       <div class="banner fl" id="banner">
+           <img src="img/c.jpg"  class="active"/>
+           <img src="img/cc.jpg" />
+           <img src="img/ccc.jpg" />
+           <img src="img/cccc.jpg" />
+           <p class="btn" id="btn">
+               <a href="#" class="first">1</a>
+               <a href="#">2</a>
+               <a href="#">3</a>
+               <a href="#">4</a>
+           </p>
+       </div>
+       <div class="sider_bar_r fr">
+            <h2><a href="#" class="tit">京东快报<span class="more">更多&gt;</span></a></h2>
+            <div class="bar_rm">
+                 <p class="wing">
+                     <a href="#">[特惠]<span class="hot">亚瑟士运动鞋1元秒杀</span></a>
+                 </p>
+                 <p class="wing">
+                     <a href="#">[特惠]<span class="hot">亚瑟士运动鞋1元秒杀</span></a>
+                 </p>
+                 <p class="wing">
+                     <a href="#">[特惠]<span class="hot">亚瑟士运动鞋1元秒杀</span></a>
+                 </p>
+                 <p class="wing">
+                     <a href="#">[特惠]<span class="hot">亚瑟士运动鞋1元秒杀</span></a>
+                 </p>
+                 <p class="wing">
+                     <a href="#">[特惠]<span class="hot">亚瑟士运动鞋1元秒杀</span></a>
+                 </p>
+            </div>
+            <h2><a href="#" class="tit">生活服务</a></h2>
+            <div class="clearfix">
+                  <ul class="bar_list fl">
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve_l">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                  </ul>
+                  <ul class="bar_list fl">
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve_l">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                  </ul>
+                  <ul class="bar_list fl">
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve_l">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                  </ul>
+                  <ul class="bar_list_l fl">
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                       <li class="list_serve_l">
+                           <a href="#"><img src="img/dyy.png" class="ico" /></a>
+                           <p><a href="#" class="telephone">话费</a></p>
+                       </li>
+                  </ul>
+            </div>
+       </div>
+  </div>
+  <div class="center_phone_r">
+       <a href="#"><img src="img/34.jpg" /></a>
+       <a href="#"><img src="img/34.jpg" /></a>
+       <a href="#"><img src="img/34.jpg" /></a>
+       <a href="#"><img src="img/34.jpg" /></a>
+       
+  </div>
+  <div class="center_title">
+      <h2 class="tit_l">
+          猜你喜欢<a href="#" class="change">换一批</a>
+      </h2>
+  </div>
+  <div class="center_home">
+       <ul class="list clearfix">
+           <li class="list_home fl">
+               <a href="#"><img src="img/jj.png" /></a>
+               <p class="table">华纳斯 茶几 茶几桌 玻璃茶几 茶桌 小户型1.3</p>
+               <p class="money">￥1139.00</p>
+           </li>
+           <li class="bord fl" ></li>
+           <li class="list_home fl">
+               <a href="#"><img src="img/jj.png" /></a>
+               <p class="table">华纳斯 茶几 茶几桌 玻璃茶几 茶桌 小户型1.3</p>
+               <p class="money">￥1139.00</p>
+           </li>
+           <li class="bord fl" ></li>
+           <li class="list_home fl">
+               <a href="#"><img src="img/jj.png" /></a>
+               <p class="table">华纳斯 茶几 茶几桌 玻璃茶几 茶桌 小户型1.3</p>
+               <p class="money">￥1139.00</p>
+           </li>
+           <li class="bord fl" ></li>
+           <li class="list_home fl">
+               <a href="#"><img src="img/jj.png" /></a>
+               <p class="table">华纳斯 茶几 茶几桌 玻璃茶几 茶桌 小户型1.3</p>
+               <p class="money">￥1139.00</p>
+           </li>
+           <li class="bord fl" ></li>
+           <li class="list_home fl">
+               <a href="#"><img src="img/jj.png" /></a>
+               <p class="table">华纳斯 茶几 茶几桌 玻璃茶几 茶桌 小户型1.3</p>
+               <p class="money">￥1139.00</p>
+           </li>
+       </ul>
+  </div>
+  <div class="center_scepial">
+      <h2 class="tit_s">
+         京东特色购
+      </h2>
+  </div>
+  <div class="center_electron clearfix">
+     <div class="center_elec_l fl">
+          <div class="elec_ll clearfix">
+              <div class="e_bike fl">
+                   <h3 class="kjjp">科技精品</h3>
+                   <p class="moto">智能渡轮电动越野摩托车</p>
+                   <a href="#"><img src="img/edd.jpg" /></a>
+              </div>
+              <a href="#" class="icoo fl"><img src="img/xz.png" /></a>
+          </div>
+          <div class="elec_lr clearfix">
+             <div class="e_bike fl">
+                   <h3 class="kjjp">科技精品</h3>
+                   <p class="moto">智能渡轮电动越野摩托车</p>
+                   <a href="#"><img src="img/edd.jpg" /></a>
+              </div>
+              <div class="e_bike fl">
+                   <h3 class="kjjp">科技精品</h3>
+                   <p class="moto">智能渡轮电动越野摩托车</p>
+                   <a href="#"><img src="img/edd.jpg" /></a>
+              </div>
+              <div class="e_bike fl">
+                   <h3 class="kjjp">科技精品</h3>
+                   <p class="moto">智能渡轮电动越野摩托车</p>
+                   <a href="#"><img src="img/edd.jpg" /></a>
+              </div>
+          </div>
+     </div>
+     <div class="center_elec_r fl">
+         <ul class="clearfix">
+              <li class="center_e_yx fl">
+                  <p class="tit_t"><span>众筹</span>尖er货</p>
+                  <p class="xian">1元，限量抽</p>
+                  <img src="img/qq.jpg" class="yinxiang" />
+              </li>
+              <li class="center_e_yx fl">
+                  <p class="tit_t"><span>众筹</span>尖er货</p>
+                  <p class="xian">1元，限量抽</p>
+                  <img src="img/qq.jpg" class="yinxiang" />
+              </li>
+              <li class="center_e_yx fl">
+                  <p class="tit_t"><span>众筹</span>尖er货</p>
+                  <p class="xian">1元，限量抽</p>
+                  <img src="img/qq.jpg" class="yinxiang" />
+              </li>
+         </ul>
+         <div class="clearfix">
+              <div class="center_r_f fl">
+                  <p class="tit_t"><span>众筹</span>尖er货</p>
+                  <p class="xian">1元，限量抽</p>
+                  <img src="img/qq.jpg" class="yinxiang" />
+              </div>
+              <div class="center_r_fr fl">
+                   <p class="tit_tf"><i>预售</i>新品抢先</p>
+                   <p class="jieshao">青轴全铝机械键盘 炫酷多模式LED灯效 269预约</p>
+                   <ul class="centet_LL clearfix">
+                        <li class="fl">
+                             <a href="#"><img src="img/jp.jpg"  class="jp"/></a>
+                        </li>
+                        <li class="fl">
+                              <p class="cent_ti"><a href="#"><span class="free">ZUK Z1</span>正在预约</a></p>
+                              <p class="cent_ti"><a href="#">32英寸智能电视<span class="free">1199元</span></a></p>
+                              <p class="cent_ti"><a href="#">优酷土豆路由宝 <span class="free">免费</span>拿</a></p>
+                              <p class="cent_ti"><a href="#">希捷个人云储存<span class="free">免费</span>试</a></p>
+                        </li>
+                   </ul>
+              </div>
+         </div>
+     </div>
+  </div>
+  <div class="center_banner"></div>
+  <div class="center_clothes clearfix">
+       <h2 class="fl">
+            <a href="#" class="clothes_pic fl">1F</a>
+            <span class="shose fl">服装鞋包</span>
+       </h2>
+       <ul class="clothes_list fr" id="clothes_list">
+            <li class="name fr"><a href="#">大牌</a></li>
+            <li class="fr"><a href="#">珠宝首饰</a></li>
+            <li class="fr"><a href="#">珠宝首饰</a></li>
+            <li class="fr"><a href="#">大牌</a></li>
+            <li class="fr"><a href="#">珠宝首饰</a></li>
+            <li class="fr"><a href="#">大牌</a></li>
+            <li class="fr"><a href="#">大牌</a></li>
+            <li class="fr"><a href="#">大牌</a></li>
+            <li class="fr"><a href="#">珠宝首饰</a></li>
+            
+            
+            
+       </ul>
+  </div>
+  <div class="center_dress clearfix">
+      <div class="dress_l fl">
+          <div class="dress_l_t">
+              <img src="img/ren.jpg" />
+              <div class="opa"></div>
+              <ul class="list clearfix">
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+              </ul>
+              <ul class="list1 clearfix">
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                           <i class="icon"></i>
+                           <span>男装</span>
+                        </a>
+                    </li>
+              </ul>
+              <div class="opa1"></div>
+              <div class="list_fz clearfix">
+                  <ul class="list3 fl">
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                  </ul>
+                  <ul class="list4 fl">
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                       <li class="list_btn">
+                           <a href="#"><i class="nvz">女装上新</i></a>
+                           <a href="#">品质男鞋</a>
+                       </li>
+                   </ul>
+              </div>
+          </div>
+          <img src="img/erre.jpg" class="new" />
+      </div>
+      <div class="dress_m fl">
+          <a href="#"><img src="img/px.jpg" /></a>
+          <a href="#"><img src="img/wcn.jpg"  class="dres_m"/></a>
+          <a href="#"><img src="img/sb.png" class="dres_mf"/></a>
+      </div>
+      <div class="dress_r fl">
+          <a href="#"><img src="img/jy.jpg" /></a>
+          <a href="#"><img src="img/sx.jpg" /></a>
+          <a href="#"><img src="img/hb.jpg" /></a>
+          <a href="#"><img src="img/gb.jpg" /></a>
+      </div>
+  </div>
+  <div class="conter_lable">
+     <ul>
+          <li><a href="#"><img src="img/e7.jpg" /></a></li>
+          <li><a href="#"><img src="img/e8.jpg" /></a></li>
+          <li><a href="#"><img src="img/ea.jpg" /></a></li>
+          <li><a href="#"><img src="img/ek.png" /></a></li>
+          <li><a href="#"><img src="img/ee.jpg" /></a></li>
+          <li><a href="#"><img src="img/ek.png" /></a></li>
+          <li><a href="#"><img src="img/ea.jpg" /></a></li>
+          <li class="list"><a href="#"><img src="img/ea.jpg" /></a></li>
+     </ul>
+  </div>
+  <div class="center_life">
+      <h2 class="clearfix">
+            <a href="#" class="clothes_pic fl">11F</a>
+            <span class="shose fl">生活服务</span>
+       </h2>
+  </div>
+  <div class="center_life_style clearfix">
+      <ul class="list_l fl">
+           <li class="list_t">
+               <img src="img/zy.jpg"  class="zuoyi"/>
+               <div class="opa"></div>
+               <div class="show">
+                   <p class="opac"></p>
+                   <ul class="list_ul">
+                       <li>
+                           <a href="#">
+                              <i class="list_ion"></i>
+                              众筹频道
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                              <i class="list_ion1"></i>
+                              理财频道
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </li>
+           <li class="list_t">
+               <img src="img/zy.jpg"  class="zuoyi"/>
+               <div class="opa"></div>
+               <div class="show">
+                   <p class="opac"></p>
+                   <ul class="list_ul">
+                       <li>
+                           <a href="#">
+                              <i class="list_ion"></i>
+                              众筹频道
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                              <i class="list_ion1"></i>
+                              理财频道
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </li>
+      </ul>
+      <div class="list_m fl">
+         <div class="list_mt">
+              <ul class="btn_rond clearfix">
+                   <li class="round sidbarb fl"></li>
+                   <li class="round fl"></li>
+                   <li class="round fl"></li>
+                   <li class="round fl"></li>
+              </ul>
+              <a href="#" class="shoubiao1"><img src="img/fg.jpg" /></a>
+         </div>
+         <div class="list_mt">
+              <a href="#"><img src="img/fg.jpg" /></a>
+              <ul class="btn_rond clearfix">
+                   <li class="round sidbarb fl"></li>
+                   <li class="round fl"></li>
+                   <li class="round fl"></li>
+                   <li class="round fl"></li>
+              </ul>
+         </div>
+      </div>
+      <div class="list_r fl">
+         <ul>
+              <li class="sider_l fl">
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+              </li>
+              <li class="sider_r fl">
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+                  <a href="#"><img src="img/fe.jpg" /></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="center_foot_title">
+      <h2 class="c_foot_tit">
+          <span>今日抄底</span>
+          <span class="hot">热门晒单</span>
+      </h2>
+  </div>
+  <div class="center_footer clearfix">
+     <div class="c_foot_f fl">
+          <img src="img/xyj.png" />
+          <p class="call">TCL XQG60-F 10102T 6公斤 大屏16</p>
+          <p class="money">￥1299.00</p>
+     </div>
+     <ul class="c_foot_s fl">
+         <li class="foot_t clearfix">
+             <a href="#" class="shuihu fl"><img src="img/gg.jpg" /></a>
+             <div class="foot_box fl">
+                  <p class="he_call">海尔Haier HGS-</br >2510单杆极速出</p>
+                  <p class="h_money">￥259.00</p>
+             </div>
+         </li>
+         <li class="foot_tf clearfix">
+             <a href="#" class="shuihu fl"><img src="img/gg.jpg" /></a>
+             <div class="foot_box fl">
+                  <p class="he_call">海尔Haier HGS-</br >2510单杆极速出</p>
+                  <p class="h_money">￥259.00</p>
+             </div>
+         </li>
+     </ul>
+     <ul class="c_foot_s fl">
+         <li class="foot_t clearfix">
+             <a href="#" class="shuihu fl"><img src="img/gg.jpg" /></a>
+             <div class="foot_box fl">
+                  <p class="he_call">海尔Haier HGS-</br >2510单杆极速出</p>
+                  <p class="h_money">￥259.00</p>
+             </div>
+         </li>
+         <li class="foot_tf clearfix">
+             <a href="#" class="shuihu fl"><img src="img/gg.jpg" /></a>
+             <div class="foot_box fl">
+                  <p class="he_call">海尔Haier HGS-</br >2510单杆极速出</p>
+                  <p class="h_money">￥259.00</p>
+             </div>
+         </li>
+     </ul>
+     <div class="c_foot_l fl">
+        <a href="#"><img src="img/rr.png" /></a>
+     </div>
+  </div>
+  <div class="footer_top">
+     <div class="top">
+         <a href="#"><img src="img/kuai.png" /></a>
+         <a href="#"><img src="img/kuai.png" /></a>
+         <a href="#"><img src="img/kuai.png" /></a>
+         <a href="#"><img src="img/kuai.png" /></a>
+     </div>
+  </div>
+  <div class="footer_middle">
+      <dl>
+          <dt>购物指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">生活旅行团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <dl>
+          <dt>购物指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">生活旅行团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <dl>
+          <dt>购物指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">生活旅行团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <dl>
+          <dt>购物指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">生活旅行团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <dl>
+          <dt>购物指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">生活旅行团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <div class="f_m_last fl">
+           <h2>京东自营覆盖区县</h2>
+           <p>京东已向全国2214个区县提供自营</br>
+              京东已向全国2214个区县提供自营</br>
+              京东已向全。
+           </p>
+           <a href="#" class="look_up">查看详情&gt;</a>
+      </div>
+  </div>
+  <div class="footer_foot">
+  <p class="connect">
+         <a href="#">关于我们</a>
+         <a href="#">联系我们</a>
+         <a href="#">商家入驻</a>
+         <a href="#">营销中心</a>
+         <a href="#">手机京东</a>
+         <a href="#">友情链接</a>
+         <a href="#">销售联盟</a>
+         <a href="#">京东社区</a>
+         <a href="#">京东公益</a>
+         <a href="#">English Site</a>
+         <a href="#" class="us">Contact Us</a>
+   </p>
+   <p class="title">北京市公安局朝阳分局备案编号110105014669 <span>|</span> 京ICP证070359号 <span>|</span> 互联网药品信息服务资格证编号（京）-经营性-2014-0008 <span>|</span> 新出发京零字第大120007号</p>
+   <div class="footer_bottom">
+       <a href="#"><img src="img/54b8871eNa9a7067e.png" /></a>
+       <a href="#"><img src="img/54b8872dNe37a9860.png" /></a>
+       <a href="#"><img src="img/54b8874bN694454a5.png" /></a>
+       <a href="#"><img src="img/54b8863dN8d2c61ec.png" /></a>
+   </div>
+  </div>
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

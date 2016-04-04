@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时</title>
+<style>
+input[type=text] { width:60px; text-align:center; }
+</style>
+<script>
+window.onload=function (){
+	var oYear=document.getElementById('year');
+	var oMonth=document.getElementById('month');
+	var oDatee=document.getElementById('date');
+	var oBtn=document.getElementById('btn');
+	var oDiv=document.getElementById('div1');
+	
+	oBtn.onclick=function (){
+		var year=parseInt(oYear.value);	
+		var month=parseInt(oMonth.value);	
+		var date=parseInt(oDatee.value);
+		tike();
+		setInterval(tike, 1000);
+		function tike(){
+		var oDate=new Date();
+		oDate.setFullYear(year, month-1, date);
+		oDate.setHours(0, 0, 0, 0);
+		var oNow=new Date();
+		var total=parseInt((oDate.getTime()-oNow.getTime())/1000);
+		
+		var d=parseInt(total/86400);
+		total%=86400;
+		var h=parseInt(total/3600);
+		total%=3600;
+		var m=parseInt(total/60);
+		total%=60;
+		var s=total;
+		
+		oDiv.innerHTML='距离'+year+'年'+month+'月'+date+'日 还有'+d+'天'+h+'小时'+m+'分钟'+s+'秒';
+		}
+	};
+	
+};
+</script>
+</head>
+
+<body>
+	<input type="text" id="year" />年
+	<input type="text" id="month" />月
+	<input type="text" id="date" />日
+	<input type="button" value="开始计时" id="btn" />
+	
+	<div id="div1"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

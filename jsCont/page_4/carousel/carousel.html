@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成春蕊——网易焦点图</title>
+<style>
+* {margin:0; padding:0; list-style:none;}
+
+#div1 {width:470px; height:150px; position:relative; margin:100px auto; overflow:hidden;}
+#div1 ul {position:absolute; left:0; top:0;}
+#div1 ul li {float:left; width:470px; height:150px;}
+
+#div1 ol {position:absolute; left:10px; bottom:10px;}
+#div1 ol li {width:70px; margin:10px; background:#f90; height:16px; float:left; opacity:0.6; filter:alpha(opacity:60);}
+#div1 ol li span {display:block; height:100%; width:0; background:black;}
+
+.sum{width:470px;margin:0 auto;}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function ()
+{
+	var oDiv=document.getElementById('div1');
+	var oUl=oDiv.children[0];
+	var aLi=oUl.children;
+	var aSpan=oDiv.getElementsByTagName('span');
+	
+	oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';
+	
+	//动
+	var now=0;
+	
+	next();
+	
+	function next()
+	{
+		startMove(aSpan[now], {width: 70}, {type: 'linear', time: 3000, end: function (){
+			now++;
+			if(now==aSpan.length)now=0;
+			
+			startMove(oUl, {left: -now*aLi[0].offsetWidth}, {end: function (){
+				for(var i=0;i<aSpan.length;i++)
+				{
+					aSpan[i].style.width=0;
+				}
+				
+				next();
+			}});
+		}});
+	}
+	
+	//移入
+	oDiv.onmouseover=function ()
+	{
+		clearInterval(aSpan[now].timer);
+		aSpan[now].style.width=0;
+	};
+	oDiv.onmouseout=function ()
+	{
+		next();
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<ul>
+    	<li><img src="img/1.jpg" /></li>
+    	<li><img src="img/2.jpg" /></li>
+    	<li><img src="img/3.jpg" /></li>
+    	<li><img src="img/4.jpg" /></li>
+    	<li><img src="img/5.jpg" /></li>
+    </ul>
+    <ol>
+    	<li><span></span></li>
+    	<li><span></span></li>
+    	<li><span></span></li>
+    	<li><span></span></li>
+    	<li><span></span></li>
+    </ol>
+</div>
+<div class="sum">
+1、开定时器，改变span的宽从0到70；当宽到最大后，图片开始运动，改变ul的left；变量now每次++；当now等于li的length时now等于0，实现循环；</br>.
+2、给divonmouseover时事件，当鼠标移动到div上时关闭定时器，span的宽回到0，当鼠标离开div时，开始继续运动；
+
+</div>
+</body>
+</html>
