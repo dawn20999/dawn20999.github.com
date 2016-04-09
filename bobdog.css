@@ -10,9 +10,13 @@ img{border:none; display:block;}
 .clearfix:after { display: block; content:''; clear: both; }
 .clearfix { zoom:1; }
 /*首页背景*/
+html,body{
+    width:100%;
+    height:100%;
+}
 .back{
     width:100%;
-    height:9.6rem;
+    height:100%;
     background: url(phoneimg/background.jpg) no-repeat;
     background-size:100% 100%;
     overflow:hidden;
