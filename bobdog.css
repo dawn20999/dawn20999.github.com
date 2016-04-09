@@ -1,0 +1,180 @@
+@charset "utf-8";
+/*base*/
+*{ margin: 0; padding: 0;outline: 0 none;}
+body {font-family: "Helvetica Neue","Helvetica,Arial","Microsoft YaHei","微软雅黑","sans-serif";width: 100%;}
+html{overflow:scroll;}
+h1, h2, h3 ,i{ font-weight:normal; font-style:normal;}
+img{border:none; display:block;}
+.fl {float: left; }
+.fr {float: right; }
+.clearfix:after { display: block; content:''; clear: both; }
+.clearfix { zoom:1; }
+/*首页背景*/
+.back{
+    width:100%;
+    height:9.6rem;
+    background: url(img/background.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow:hidden;
+    position:relative;
+
+}
+/*header*/
+
+.logo{
+    width:14.5%;
+    height:0.92rem;
+    background: url(img/logo.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top:0;
+    margin-left:3.1%;
+}
+.zan{
+    width:87%;
+    height:2.23rem;
+    position:absolute;
+    top:0.65rem;
+    right:0;
+}
+.icon{
+    width:6.7%;
+    height:0.31rem;
+    position:absolute;
+    top:2.48rem;
+    left:40%;
+    -webkit-animation: 'move' 0.8s linear infinite;
+    -ms-animation: 'move' 0.8s linear infinite;
+    -moz-animation: 'move' 0.8s linear infinite;
+}
+.icon2{
+    width:42%;
+    height:0.52rem;
+    position:absolute;
+    top:2.44rem;
+    left:48%;
+}
+/*main*/
+.main{
+    position:absolute;
+    width:90%;
+    height:6.52rem;
+    left:5%;
+    top:3.08rem;
+}
+.holder2{
+    width:27.5%;
+    height:3.58rem;
+    position:absolute;
+    bottom:0;
+    left:36%;
+}
+.move{
+    width:100%;
+    position:relative;
+    -webkit-animation:'move1' 10s linear infinite;
+}
+.round{
+    width:100%;
+    height:5.8rem;
+    position:relative;
+}
+.kid1,.kid2,.kid3,.kid4,.kid5,.kid6,.kid7,.kid8{
+    -webkit-animation:'move2' 10s linear infinite;
+    -webkit-transform-origin:50% 12.5%;
+}
+.kid1{
+    width:16%;
+    position:absolute;
+    top:0;
+    left:33%;
+}
+.kid2{
+    width:16%;
+    position:absolute;
+    top:0.7rem;
+    left:70%;
+}
+.kid3{
+    width:16%;
+    position:absolute;
+    top:2.2rem;
+    right:0;
+}
+.kid4{
+    width:16%;
+    position:absolute;
+    top:4.2rem;
+    left:78%;
+}
+.kid5{
+    width:16%;
+    position:absolute;
+    top:5.4rem;
+    left:49%;
+}
+.kid6{
+    width:16%;
+    position:absolute;
+    top:4.8rem;
+    left:16%;
+}
+.kid7{
+    width:18%;
+    position:absolute;
+    top:3rem;
+    left:0;
+}
+.kid8{
+    width:12.5%;
+    position:absolute;
+    top:1.2rem;
+    left:7%;
+}
+
+.holder1{
+    width:40.1%;
+    height:3.76rem;
+    position:absolute;
+    bottom:0;
+    left:29.5%;
+}
+.flower{
+    width:68.75%;
+    height:2.02rem;
+    position:absolute;
+    top:1.8rem;
+    left:16%;
+}
+.photo{
+    width:50%;
+    height:1.14rem;
+    position:absolute;
+    top:3.5rem;
+    left:25%;
+}
+.jt{
+    width: 6%;
+    position:absolute;
+    top:4.6rem;
+    left: 50%;
+    -webkit-animation: 'move3' 0.8s linear infinite;
+}
+
+@-webkit-keyframes 'move'{.
+    0%{-webkit-transform:translateX(0);}
+    50%{-webkit-transform:translateX(-20px);}
+    100%{-webkit-transform:translateX(0);}
+}
+@-webkit-keyframes 'move1' {
+    0%{-webkit-transform:rotate(0);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes 'move2' {
+    0%{-webkit-transform:rotate(0);}
+    100%{-webkit-transform: rotate(-360deg);}
+}
+@-webkit-keyframes 'move3' {
+    0%{-webkit-transform: translateY(0);}
+    50%{-webkit-transform: translateY(-20px);}
+    100%{-webkit-transform: translateY(0);}
+}
