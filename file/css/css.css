@@ -1,0 +1,15 @@
+.jcImgScroll pre{height:61px;width:31px;top:140px;}
+.jcImgScroll pre.prev { background:url(../images/arrow.png) no-repeat left top;left:10px;}
+.jcImgScroll pre.next { background:url(../images/arrow.png) no-repeat right top;right:10px;}
+/*#Index_Box {*/
+    /*POSITION: relative; MARGIN: 30px auto 20px; WIDTH: 960px; HEIGHT: 300px*/
+/*}*/
+#Index_Box UL {
+    position: relative; width: 343px; height: 241px; margin: 0px auto;
+}
+#Index_Box LI {
+    width: 343px; height: 241px; position: absolute; overflow: hidden; z-index: 3; top: 0px; left: 0px; display: list-item;
+}
+/*#Index_Box LI IMG {*/
+    /*WIDTH: 100%; BACKGROUND: url(images/loading.gif) no-repeat center 50%; HEIGHT: 100%; VERTICAL-ALIGN: top*/
+/*}*/
