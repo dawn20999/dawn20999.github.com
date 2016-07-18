@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config"/>
+    <meta name="HandheldFriendly" content="true">
+    <title>访客临时钥匙</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animations.css" />
+</head>
+<body id="wrap">
+<!--android透明层-->
+<div id="andro" style="display:none;">
+    <div class="page page-1-1 page-current">
+        <div class="opa"></div>
+        <div class="wrap">
+            <img src="images/androidaudio.png" class="audio pt-page-rotateCubeLeftIn"/>
+            <img class="img_3 pt-page-moveIconUp" src="images/icon_up.png" />
+        </div>
+    </div>
+</div>
+<!--ios透明层-->
+<div id="ios" style="display:none;">
+    <div class="iosPage page-1-1 page-current">
+        <div class="iosOpa"></div>
+        <div class="wrap">
+            <img src="images/audio.png" class="iosAudio pt-page-moveFromRight"/>
+            <img class="img_3 pt-page-moveIconUp" src="images/icon_up.png" />
+        </div>
+    </div>
+    <div class="iosPage page-2-1 page-current hide">
+        <div class="iosOpa"></div>
+        <div class="wrap">
+            <img src="images/up.png" class="iosUp pt-page-rotateCubeLeftIn"/>
+            <img class="img_3 pt-page-moveIconUp" src="images/icon_up.png" />
+        </div>
+    </div>
+</div>
+<!--页面内容-->
+<div class="content">
+    <p class="title">欢迎您光临<span>卡多宝智慧小区</span></p>
+    <div class="gif">
+        <img src="images/door.png"/>
+        <div class="slip">
+            <img src="images/hand.png"/>
+        </div>
+    </div>
+    <p class="action">请在与门禁设备距离<span>10cm</span>内操作<br/>该临时钥匙仅限当日有效</p>
+    <div class="btn">
+        <!--信号加载中-->
+        <div class="loading" id="loading">
+            <div class="round"></div>
+            <!--<img src="images/key_btn_disable.png" class="round"/>-->
+            <p class="signal">钥匙加载中</p>
+            <img src="images/loding.gif" class="drop" />
+        </div>
+        <!--信号加载失败-->
+        <div class="loadFail" id="fail">
+            <div class="round"></div>
+            <!--<img src="images/key_btn_disable.png" class="round"/>-->
+            <p class="fail">钥匙加载失败</p>
+            <div class="rebox" id="rebox">
+                <a href="javascript:;" class="renovate">点击此处刷新钥匙</a>
+            </div>
+        </div>
+        <!--点击按钮开锁-->
+        <div class="key clearfix">
+            <div class="key1" id="key">
+                <div id="key2">
+                    <div class="circle1">&nbsp;</div>
+                    <div class="circle2">&nbsp;</div>
+                    <div class="circle3">&nbsp;</div>
+                    <div class="circle4">&nbsp;</div>
+                    <img src="images/key_btn@2x.png" />
+                </div>
+                <img src="images/key_btn@2x.png" id="icon"/>
+            </div>
+            <!--<img src="images/move.gif" id="key2">-->
+            <img src="images/open.png" class="key2" />
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script src="js/indexup.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
