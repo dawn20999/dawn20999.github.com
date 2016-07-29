@@ -58,27 +58,40 @@
 </body>
 
 <script type="text/javascript">
-	function _IsIOS() {
-		var ua = navigator.userAgent.toLowerCase();
-		if (ua.match(/iPhone\sOS/i) == "iphone os") {
-			return true;
-		} else {
-			return false;
+	function IsPC()
+	{
+		var userAgentInfo = navigator.userAgent;
+		var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+		var flag = true;
+		for (var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
 		}
+		return flag;
 	}
-	function _IsAndroid() {
-		var ua = navigator.userAgent.toLowerCase();
-		if (ua.match(/Android/i) == "android") {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	if(!_IsAndroid()){
-		alert('熊孩子！用手机玩');
-	}else if(!_IsIOS()){
+	if(IsPC){
 		alert('熊孩子！用手机玩');
 	}
+	//	function _IsIOS() {
+//		var ua = navigator.userAgent.toLowerCase();
+//		if (ua.match(/iPhone\sOS/i) == "iphone os") {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+//	function _IsAndroid() {
+//		var ua = navigator.userAgent.toLowerCase();
+//		if (ua.match(/Android/i) == "android") {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+//	if(!_IsAndroid()){
+//		alert('熊孩子！用手机玩');
+//	}else if(!_IsIOS()){
+//		alert('熊孩子！用手机玩');
+//	}
     var longStick;
     var shortStick;
     var screenWidth = document.documentElement.clientWidth;
