@@ -48,35 +48,43 @@
    	    <div class="btn share">分享</div>
    	    <div class="btn again">再玩一次</div>
    </div>
-   <div id="mask">
+	<div id="mask">
 		<img src="images/share_img01.gif"/>
 </div>
-	
 	<div class="reloadImg" style="display: none;">
 		<img src="images/stick.gif"  />
 	</div>
 </body>
 
 <script type="text/javascript">
-	function _IsIOS() {
-		var ua = navigator.userAgent.toLowerCase();
-		if (ua.match(/iPhone\sOS/i) == "iphone os") {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	function _IsAndroid() {
-		var ua = navigator.userAgent.toLowerCase();
-		if (ua.match(/Android/i) == "android") {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	if(!_IsAndroid() && !_IsIOS()){
-		alert('熊孩子！用手机玩');
-	}
+//	function _IsIOS() {
+//		var ua = navigator.userAgent.toLowerCase();
+//		if (ua.match(/iPhone\sOS/i) == "iphone os") {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+//	function _IsAndroid() {
+//		var ua = navigator.userAgent.toLowerCase();
+//		if (ua.match(/Android/i) == "android") {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+//	if(!_IsAndroid() && !_IsIOS()){
+//		alert('熊孩子！用手机玩');
+//	}
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		alert("哟！土豪！玩玩吧！看你智商咋样！");
+	} else if (/(Android)/i.test(navigator.userAgent)) {
+		alert("看你智商如何！come on！");
+	} else {
+		alert("不用手机你玩不了！哈哈！");
+	};
+
+
     var longStick;
     var shortStick;
     var screenWidth = document.documentElement.clientWidth;
