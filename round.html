@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <title>转起来</title>
+    <link rel="stylesheet" href="css/roundstyle.css">
+    <script src="js/zepto.min.js"></script>
+    <script>
+        (function ($, window) {
+            window.addEventListener('DOMContentLoaded', function () {
+                var shuping = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+                var timer = null;
+                //设置字体
+                function setFontSize() {
+                    var w = document.documentElement.clientWidth || document.body.clientWidth;
+                    document.documentElement.style.fontSize = 100 * w / 640 + 'px';
+                }
+                setFontSize();
+                window.addEventListener(shuping, function () {
+                    clearTimeout(timer);
+                    timer = setTimeout(setFontSize, 300);
+                }, false);
+            }, false);
+        })($, window);
+    </script>
+</head>
+<body>
+    <section>
+        <div class="wrap">
+            <div class="main">
+                <div class="holder2">
+                    <img src="phoneimg/holder2.png" >
+                </div>
+                <div class="content">
+                    <div class="circle">
+                        <img src="phoneimg/circle.png" >
+                    </div>
+
+                </div>
+                <div class="holder1">
+                    <img src="phoneimg/holder1.png" >
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
