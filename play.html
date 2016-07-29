@@ -58,6 +58,28 @@
 </body>
 
 <script type="text/javascript">
+	function _IsIOS() {
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.match(/iPhone\sOS/i) == "iphone os") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function _IsAndroid() {
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.match(/Android/i) == "android") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if(!_IsAndroid()){
+//            window.location.href ="carduo.html";
+		alert('android');
+	}else if(!_IsIOS()){
+		alert('IOS');
+	}
     var longStick;
     var shortStick;
     var screenWidth = document.documentElement.clientWidth;
