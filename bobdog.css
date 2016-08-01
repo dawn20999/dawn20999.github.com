@@ -46,9 +46,9 @@ html,body{
     position:absolute;
     top:2.48rem;
     left:40%;
-    -webkit-animation: 'move' 0.8s linear infinite;
-    -ms-animation: 'move' 0.8s linear infinite;
-    -moz-animation: 'move' 0.8s linear infinite;
+    -webkit-animation: move 0.8s linear infinite;
+    -ms-animation: move 0.8s linear infinite;
+    -moz-animation: move 0.8s linear infinite;
 }
 .icon2{
     width:42%;
@@ -75,7 +75,7 @@ html,body{
 .move{
     width:100%;
     position:relative;
-    -webkit-animation:'move1' 10s linear infinite;
+    -webkit-animation:move1 10s linear infinite;
 }
 .round{
     width:100%;
@@ -83,7 +83,7 @@ html,body{
     position:relative;
 }
 .kid1,.kid2,.kid3,.kid4,.kid5,.kid6,.kid7,.kid8{
-    -webkit-animation:'move2' 10s linear infinite;
+    -webkit-animation:move2 10s linear infinite;
     -webkit-transform-origin:50% 12.5%;
 }
 .kid1{
@@ -161,23 +161,23 @@ html,body{
     position:absolute;
     top:4.6rem;
     left: 50%;
-    -webkit-animation: 'move3' 0.8s linear infinite;
+    -webkit-animation: move3 0.8s linear infinite;
 }
 
-@-webkit-keyframes 'move'{.
+@-webkit-keyframes move{
     0%{-webkit-transform:translateX(0);}
     50%{-webkit-transform:translateX(-20px);}
     100%{-webkit-transform:translateX(0);}
 }
-@-webkit-keyframes 'move1' {
-    0%{-webkit-transform:rotate(0);}
+@-webkit-keyframes move1 {
+    0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform: rotate(360deg);}
 }
-@-webkit-keyframes 'move2' {
-    0%{-webkit-transform:rotate(0);}
+@-webkit-keyframes move2 {
+    0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform: rotate(-360deg);}
 }
-@-webkit-keyframes 'move3' {
+@-webkit-keyframes move3 {
     0%{-webkit-transform: translateY(0);}
     50%{-webkit-transform: translateY(-20px);}
     100%{-webkit-transform: translateY(0);}
