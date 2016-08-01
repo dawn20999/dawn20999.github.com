@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="css/roundstyle.css">
     <script src="js/zepto.min.js"></script>
     <script>
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+//            alert("用手机看！");
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+//            alert("用手机看！");
+        } else {
+            alert("用手机看！");
+        };
         (function ($, window) {
             window.addEventListener('DOMContentLoaded', function () {
                 var shuping = 'onorientationchange' in window ? 'orientationchange' : 'resize';
