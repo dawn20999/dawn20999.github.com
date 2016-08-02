@@ -119,7 +119,7 @@ body{
 .move{
     width:100%;
     position:relative;
-    -webkit-animation:move 10s linear infinite;
+    -webkit-animation:move 20s linear infinite;
 }
 .move .round{
     width:5.74rem;
@@ -165,18 +165,20 @@ body{
 }
 .kid7{
     width:1.15rem;
+    height:1.2rem;
     position:absolute;
     top:3.2rem;
     left:-0.2rem;
 }
 .kid8{
-    width:0.8rem;
+    width:1.02rem;
+    height:1.2rem;
     position:absolute;
     top:1.2rem;
     left:0.25rem;
 }
 .kid1,.kid2,.kid3,.kid4,.kid5,.kid6,.kid7,.kid8{
-    -webkit-animation:move1 10s linear infinite;
+    -webkit-animation:move1 20s linear infinite;
     -webkit-transform-origin:50% 12.5%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
