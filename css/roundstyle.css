@@ -40,10 +40,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+html{overflow:scroll;}
 html, body {
     width: 100%;
     height:100%;
-    overflow:hidden;
 }
 html {
     overflow-x: hidden;
@@ -51,10 +51,11 @@ html {
 }
 /*==========================main style==========================*/
 body{
-    background:url(../phoneimg/background.jpg) no-repeat;
-    background-size:100% 100%;
     width:100%;
     height:100%;
+    background:url(../phoneimg/background.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
 }
 .wrap{
     width:100%;
@@ -65,12 +66,10 @@ body{
     width:90%;
     margin-left:5%;
     position: relative;
-    padding-top:5.5rem;
 }
 .holder2{
+    padding-top:3.9rem;
     width:100%;
-    height:3.58rem;
-    margin:0 auto;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
@@ -90,7 +89,7 @@ body{
 }
 .holder1{
     position: absolute;
-    top:5.51rem;
+    top:3.91rem;
     left:-.01rem;
     z-index: 1;
     width:100%;
@@ -114,7 +113,7 @@ body{
 }
 .content{
     position:absolute;
-    top:2.65rem;
+    top:1.05rem;
     left:0.06rem;
 }
 .move{
@@ -179,6 +178,9 @@ body{
 .kid1,.kid2,.kid3,.kid4,.kid5,.kid6,.kid7,.kid8{
     -webkit-animation:move1 10s linear infinite;
     -webkit-transform-origin:50% 12.5%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
 }
 @-webkit-keyframes move {
 0%{-webkit-transform:rotate(0deg);}
@@ -188,15 +190,22 @@ body{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform: rotate(-360deg);}
 }
+@-webkit-keyframes move2 {
+    0%{-webkit-transform: rotate(0deg)  scale(0)}
+    100%{
+        -webkit-transform: rotate(720deg)  scale(1) ;
+    }
+}
 .flower{
     position: absolute;
-    top:4.6rem;
+    top:3rem;
     left:0.7rem;
     z-index: 5;
 }
 .flower img{
     width:4.4rem;
     height:2.02rem;
+    -webkit-animation:move2 3s linear  ;
 }
 
 
