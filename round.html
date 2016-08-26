@@ -34,30 +34,7 @@
                 }, false);
             }, false);
         })($, window);
-        (function(){
-            var QQ='1027573896';  //换成你公司的企业QQ(客服QQ)
-            var str='tencent://message/?Menu=yes&uin='+QQ+'&Site=jb51net&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45';
-            if(window.navigator.userAgent.indexOf('MSIE')!=-1){
-                document.onclick=function(){
-                    var iF=document.createElement('iframe');
-                    iF.src=str;
-                    iF.frameBorder='0';
-                    iF.style.display='none';
-                    document.body.appendChild(iF);
-                };
-                var event = document.createEventObject();
-                document.fireEvent('onclick',event);
-            }else{
-                var oA=document.createElement('a');
-                oA.href=str;
-                oA.style.display='none';
-                document.body.appendChild(oA);
 
-                var event = new MouseEvent('click');
-
-                oA.dispatchEvent(event);
-            }
-        })()
     </script>
 </head>
 <body>
@@ -97,5 +74,31 @@
             </div>
         </div>
     </section>
+<script >
+    (function(){
+        var QQ='1027573896';  //换成你公司的企业QQ(客服QQ)
+        var str='tencent://message/?Menu=yes&uin='+QQ+'&Site=jb51net&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45';
+        if(window.navigator.userAgent.indexOf('MSIE')!=-1){
+            document.onclick=function(){
+                var iF=document.createElement('iframe');
+                iF.src=str;
+                iF.frameBorder='0';
+                iF.style.display='none';
+                document.body.appendChild(iF);
+            };
+            var event = document.createEventObject();
+            document.fireEvent('onclick',event);
+        }else{
+            var oA=document.createElement('a');
+            oA.href=str;
+            oA.style.display='none';
+            document.body.appendChild(oA);
+
+            var event = new MouseEvent('click');
+
+            oA.dispatchEvent(event);
+        }
+    })()
+</script>
 </body>
 </html>
