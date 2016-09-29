@@ -36,7 +36,7 @@
         })($, window);
         document.addEventListener('DOMContentLoaded', function () {
             function audioAutoPlay() {
-                var audio = document.getElementById('audio');
+                var audio = document.getElementById('bg-music');
                 audio.play();
                 document.addEventListener("WeixinJSBridgeReady", function () {
                     audio.play();
@@ -50,8 +50,9 @@
 <section>
     <div class="wrap">
         <div class="main">
-            <audio src="Ten thousand times of sadness.mp3" autoplay="autoplay" id="audio" loop="-1" width="0" height="0">
-            </audio>
+            <audio style="display:none; height: 0" id="bg-music" preload="auto" src="Ten%20thousand%20times%20of%20sadness.mp3" loop="loop"></audio>
+            <!--<audio src="Ten thousand times of sadness.mp3" autoplay="autoplay" id="audio" loop="-1" width="0" height="0">-->
+            <!--</audio>-->
             <div class="holder2">
                 <img src="phoneimg/holder2.png" >
             </div>
