@@ -34,9 +34,16 @@
                 }, false);
             }, false);
         })($, window);
-$(function(){
-    $('#audio').get(0).play();
-});
+        document.addEventListener('DOMContentLoaded', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    audio.play();
+                }, false);
+            }
+            audioAutoPlay();
+        });
     </script>
 </head>
 <body>
