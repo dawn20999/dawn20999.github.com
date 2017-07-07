@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动textarea</title>
+	<link rel="stylesheet" href="base/mobBase.css">
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script>
+		/* 根据屏幕尺寸改变根元素大小 */
+		var calculate_size = function () {
+			var BASE_FONT_SIZE = 100;
+			var docEl = document.documentElement,
+			clientWidth = docEl.clientWidth;
+			if (!clientWidth) return;
+			docEl.style.fontSize = BASE_FONT_SIZE * (clientWidth / 750) + 'px';
+		};
+		// Abort if browser does not support addEventListener
+		if (document.addEventListener) {
+			var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			window.addEventListener(resizeEvt, calculate_size, false);
+			document.addEventListener('DOMContentLoaded', calculate_size, false);
+			calculate_size();
+		}
+	</script>
+	<style>
+		body,html{
+			width: 100%;
+			font-size: 0.32rem;
+		}
+		.content{
+			width: 100%;
+			padding:0.2rem 0.3rem;
+			overflow: hidden;
+		}
+		.textarea{
+			border:1px solid #ccc;
+			width: 100%;
+			min-height: 2rem;
+		}
+	</style>
+</head>
+<body>
+<div class="content">
+	<textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+</div>
+	
+</body>
+</html>
