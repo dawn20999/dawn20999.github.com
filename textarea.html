@@ -8,6 +8,34 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<title>移动textarea</title>
 	<link rel="stylesheet" href="base/mobBase.css">
+	<style>
+		body,html{
+			width: 100%;
+			font-size: 0.32rem;
+		}
+		.content{
+			width: 100%;
+			padding:0.2rem 0.3rem;
+		}
+		.textarea{
+			border:1px solid #ccc;
+			width: 100%;
+			min-height: 3rem;
+		}
+		.text{
+			width: 100%;
+			min-height: 2rem;
+		}
+		.box{
+			position: relative;
+		}
+		.pl{
+			position: absolute;
+			left: 0;
+			top:0;
+			color:#ccc;
+		}
+	</style>
 	<script src="js/zepto.min.js"></script>
 	<script>
 		/* 根据屏幕尺寸改变根元素大小 */
@@ -36,35 +64,34 @@
 					rows=rows+2;
 					document.getElementById("erea").rows=rows;
 				}
-			}
+			};
+
+
+
+			$(".box").on('click',function(){
+				$(".pl").hide();
+			})
+			$(".text").blur(function(){
+				if($(".text").html()==''){
+					$(".pl").show();
+				}
+			})
+			
+				
 		})
 		
 	</script>
-	<style>
-		body,html{
-			width: 100%;
-			font-size: 0.32rem;
-		}
-		.content{
-			width: 100%;
-			padding:0.2rem 0.3rem;
-		}
-		.textarea{
-			border:1px solid #ccc;
-			width: 100%;
-			min-height: 3rem;
-		}
-		.text{
-			width: 100%;
-			min-height: 2rem;
-		}
-	</style>
+
 </head>
 <body>
 <div class="content">
 	<textarea class="textarea"  contenteditable="true"></textarea>
 	<textarea id="erea" rows="1" cols="10" onkeyup="changerow()"></textarea>
-	<p contenteditable="true" class="text"></p>
+	<div class="box">
+		<p contenteditable="true" class="text"></p>
+		<span class="pl">我is阿发哦批发覅i</span>
+	</div>
+	
 	<p>122</p>
 </div>
 	
