@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>移动textarea</title>
+	<link rel="stylesheet" href="base/mobBase.css">
+	<style>
+		body,html{
+			width: 100%;
+			font-size: 0.32rem;
+		}
+		.content{
+			width: 100%;
+			padding:0.2rem 0.3rem;
+		}
+		.textarea{
+			border:1px solid #ccc;
+			width: 100%;
+			min-height: 3rem;
+		}
+		.text{
+			width: 100%;
+			min-height: 2rem;
+			border:1px solid #fff;
+			outline: none;
+			-webkit-appearance:none; 
+		}
+		.box{
+			position: relative;
+		}
+		.pl{
+			position: absolute;
+			left: 0;
+			top:0;
+			color:#ccc;
+		}
+	</style>
+	<script src="js/zepto.min.js"></script>
+	<script>
+		/* 根据屏幕尺寸改变根元素大小 */
+		var calculate_size = function () {
+			var BASE_FONT_SIZE = 100;
+			var docEl = document.documentElement,
+			clientWidth = docEl.clientWidth;
+			if (!clientWidth) return;
+			docEl.style.fontSize = BASE_FONT_SIZE * (clientWidth / 750) + 'px';
+		};
+		// Abort if browser does not support addEventListener
+		if (document.addEventListener) {
+			var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			window.addEventListener(resizeEvt, calculate_size, false);
+			document.addEventListener('DOMContentLoaded', calculate_size, false);
+			calculate_size();
+		}
+
+		$(function(){
+			var rows=1;//根据文本框初始值设置。
+			var cols=10;//根据文本框初始值设置。
+			var num=0;
+			function changerow(){
+				num++;
+				if(num==rows*cols-1){
+					rows=rows+2;
+					document.getElementById("erea").rows=rows;
+				}
+			};
+
+
+
+			$(".box").on('click',function(){
+				$(".pl").hide();
+				$(".text").focus();
+			})
+			$(".text").blur(function(){
+				if($(".text").html()==''){
+					$(".pl").show();
+				}
+			})
+			
+				
+		})
+		
+	</script>
+
+</head>
+<body>
+<div class="content">
+	<textarea class="textarea"  contenteditable="true"></textarea>
+	<textarea id="erea" rows="1" cols="10" onkeyup="changerow()"></textarea>
+	<div class="box">
+		<p contenteditable="true" class="text"></p>
+		<span class="pl">我is阿发哦批发覅i</span>
+	</div>
+	
+	<p>122</p>
+</div>
+	
+</body>
+</html>
